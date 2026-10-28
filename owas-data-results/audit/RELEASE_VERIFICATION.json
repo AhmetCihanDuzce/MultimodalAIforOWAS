@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "release_date": "2026-10-27",
+  "manuscript_title": "Expert-Referenced Evaluation of Multimodal AI for OWAS Coding Across Workplace Visual Conditions",
+  "manuscript_counts_verified": {
+    "frame_pairs": 181,
+    "coverall": 69,
+    "everyday": 112,
+    "AI_coding_rows": 2896,
+    "expert_consensus_codes": 543,
+    "prior_field_comparisons": 9050,
+    "references": 21
+  },
+  "latest_manuscript_primary_agreement_counts_match": true,
+  "latest_manuscript_condition4_action_and_high_reference_counts_match": true,
+  "latest_manuscript_candidate_summary_matches": true,
+  "source_AI_rows_compared_field_for_field_before_sanitization": 2896,
+  "original_workbook_XML_independent_checks": {
+    "status": "PASS",
+    "raw_xml_reference_cells": 543,
+    "performance_rows": 144,
+    "category_rows": 2016,
+    "exact_paired_tests": 564,
+    "integer_exact_illuminance_tests": 288,
+    "holm_families": 9,
+    "candidate_memberships": 1058,
+    "derived_outputs_checked": 5792
+  },
+  "public_reproduction": {
+    "status": "PASS",
+    "scientific_csv_tables_compared": 33,
+    "cells_compared": 740170,
+    "tolerated_float_differences": 7,
+    "maximum_absolute_float_difference": 1.000017846308765e-10,
+    "tolerance": "Exact text and integer equality; floating values within absolute 1e-9.",
+    "scope": "Fresh calculations from released deidentified numerical inputs versus all released scientific CSV results. Source-file paths, workbook coordinates and private raw archives are not part of this public reproduction.",
+    "resampling_settings_equal": true
+  },
+  "scientific_analysis_functions_unchanged_except_input_adapter": [
+    "balanced_illuminance",
+    "candidate_codes",
+    "candidates",
+    "comparisons",
+    "descriptive",
+    "endpoint",
+    "groups",
+    "main",
+    "metrics",
+    "ordered_bootstrap",
+    "paired",
+    "save"
+  ],
+  "supplement": {
+    "scientific_tables_unchanged": 16,
+    "rendered_pages_reviewed": 11,
+    "changed_paragraph_indices": [
+      1,
+      66
+    ],
+    "numerical_images_only": true,
+    "comments_tracked_changes_hidden_text": false,
+    "author_metadata_empty": true
+  },
+  "privacy_minimization": {
+    "excluded": [
+      "participant photographs and video",
+      "main manuscript",
+      "signed consent",
+      "original named input workbooks/archives and unused sheets",
+      "original photo/source paths",
+      "raw chats and full session logs",
+      "private editorial placeholders",
+      "obsolete manuscript builders and stale reference QA"
+    ],
+    "removed_table_fields": [
+      "source_files",
+      "excel_sheet",
+      "excel_row"
+    ],
+    "English_short_notes_preserved": true,
+    "no_detected_personal_identifiers_in_released_coding_notes": true,
+    "release_authorization_not_established_by_packaging": true
+  },
+  "source_deviation_disclosure": "M56 everyday Condition 4 prior-preview deviation verified in original QA log; log itself withheld.",
+  "external_repository_upload_performed": false
+}

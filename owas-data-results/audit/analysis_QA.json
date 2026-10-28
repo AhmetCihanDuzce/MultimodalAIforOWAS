@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "original_outputs": 2896,
+  "unique_frame_pairs": 181,
+  "reference_codes": 543,
+  "constant_load": 1,
+  "expected_primary_rows": 2896,
+  "prior_field_checks": 9050,
+  "missing_frame_ids": 0,
+  "duplicate_ids": 0,
+  "provider_identifiers_verified": false,
+  "scope": "One worker, two recording sets. Not a randomized clothing or illuminance experiment.",
+  "python": "3.12.14"
+}
