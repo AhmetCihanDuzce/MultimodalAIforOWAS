@@ -1,0 +1,88 @@
+{
+  "manifest_version": 1,
+  "release_date": "2026-10-27",
+  "package": "owas-code",
+  "scope": "Payload files; excludes MANIFEST.json and SHA256SUMS.txt; not a digital signature.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 51,
+      "sha256": "b75b66c2c78584a68525d435f4fb2f1e4997dd2b54206e07a0ffeddbe4d1b50f"
+    },
+    {
+      "path": ".python-version",
+      "size_bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": "CITATION.md",
+      "size_bytes": 571,
+      "sha256": "0fc3ec916b53478b3340a266cccc5256ef9e7b2909dca3d2254bb46e050ffbaa"
+    },
+    {
+      "path": "LICENSE_STATUS.md",
+      "size_bytes": 662,
+      "sha256": "1cac4f7bc2c9ad179ca6632b4e211fd0b44644693109a07d1a38c61b8fe78d43"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 5666,
+      "sha256": "da73a8e287b4038540583f1b450c395fce80afdf8a256fa747bc350d5f1137ba"
+    },
+    {
+      "path": "analyse_study.py",
+      "size_bytes": 31227,
+      "sha256": "9e13893d4c149b8e8ef5ea9d90311cca80d8059ff87de4f55bec5011afe2bc8d"
+    },
+    {
+      "path": "docs/PROVENANCE_AND_LIMITATIONS.md",
+      "size_bytes": 5449,
+      "sha256": "2493f621116bebbea5ff4397c0279a8784b524a9d526d707fbe1d1ed317b1387"
+    },
+    {
+      "path": "independent_checks.py",
+      "size_bytes": 5691,
+      "sha256": "92a3ae011530c2c612e8ff805cda77fddc71c1b6b6bb8d2162c6a7ce0918b026"
+    },
+    {
+      "path": "make_figures.py",
+      "size_bytes": 6101,
+      "sha256": "7e1e42e2380a3cce22e77fd676b38406469882730cc55e14330e07bcd48a299b"
+    },
+    {
+      "path": "owas_core.py",
+      "size_bytes": 2632,
+      "sha256": "4ffb2942b2d1efd5726266b0c3ad5f81d648b2a8354f37d5bdc731528f0084a2"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 115,
+      "sha256": "bef7bccdae8afb5572e43ad9e12ea49d042f1e6c94557873601e08aba6c8b783"
+    },
+    {
+      "path": "run_reproduction.py",
+      "size_bytes": 2952,
+      "sha256": "95cce48752e0291f11ed40a97ef63e0ad7fbdfaa6cff1b146777cb3e1710c243"
+    },
+    {
+      "path": "statistical_resampling.json",
+      "size_bytes": 397,
+      "sha256": "4fbfc38fa244d77db4a77cd4f451e0f502e165ae353254fea80d099dd3eafd15"
+    },
+    {
+      "path": "verified_environment.json",
+      "size_bytes": 471,
+      "sha256": "871de395840584d3639908226ea7ff30916bb73e795ac3ae2e0718a9cf3da457"
+    },
+    {
+      "path": "verify_checksums.py",
+      "size_bytes": 1259,
+      "sha256": "f90bc4f8f7b4f6ab23f047ec68e051b852898aca21cbf27d4f0ef34193d174a4"
+    },
+    {
+      "path": "verify_release.py",
+      "size_bytes": 4081,
+      "sha256": "da6156209ba3fd315a3e09bf892430b3b9b1342ecd8c258f8a47c7a26064fa3c"
+    }
+  ]
+}
