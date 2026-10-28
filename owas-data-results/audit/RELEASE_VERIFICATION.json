@@ -1,0 +1,286 @@
+{
+  "status": "PASS",
+  "release_date": "2026-10-28",
+  "release_version": "2026-10-28-v4",
+  "manuscript_title": "Expert-Referenced Evaluation of Multimodal AI for OWAS Coding Across Workplace Visual Conditions",
+  "manuscript_sha256": "002a53799038eae4f8bd4553ad33432eebf7986927e7ff9e1ef23a2803ab070e",
+  "manuscript_counts_verified": {
+    "frame_pairs": 181,
+    "coverall": 69,
+    "everyday": 112,
+    "AI_coding_rows": 2896,
+    "expert_consensus_codes": 543,
+    "prior_field_comparisons": 9050,
+    "references": 22
+  },
+  "abstract_word_count": 185,
+  "session_isolation_statement_retained": true,
+  "scientific_results_unchanged_except_lookup": true,
+  "input_CSVs_byte_preserved": true,
+  "historical_source_audit": "RELEASE_VERIFICATION_v2_ARCHIVE.json",
+  "outstanding_author_information": {
+    "location": "separate document outside both ZIP packages",
+    "filename": "OWAS_Yazarlardan_Beklenen_Bilgiler.docx",
+    "included_in_zip": false,
+    "sha256": "193ef24c673b0cbbd251ef8aa9f283ee261499ae1cd21d90133affb37781d8ed"
+  },
+  "external_repository_upload_performed": false,
+  "verification_scope": "Computational, document and packaging validation; unresolved investigator facts are listed separately.",
+  "public_reproduction": {
+    "status": "PASS",
+    "scientific_csv_tables_compared": 33,
+    "protocol_audit_files_compared": 3,
+    "cells_compared": 740170,
+    "tolerated_float_differences": 7,
+    "maximum_absolute_float_difference": 1.000017846308765e-10,
+    "tolerance": "Exact text and integer equality; floating values within absolute 1e-9.",
+    "scope": "Fresh calculations from released deidentified numerical inputs versus all released scientific CSV results. Source-file paths, workbook coordinates and private raw archives are not part of this public reproduction.",
+    "resampling_settings_equal": true,
+    "tables": [
+      {
+        "file": "action_lookup_load1.csv",
+        "rows": 84,
+        "columns": 2
+      },
+      {
+        "file": "candidate_audit.csv",
+        "rows": 1058,
+        "columns": 16
+      },
+      {
+        "file": "candidate_derived_matrix.csv",
+        "rows": 5792,
+        "columns": 57
+      },
+      {
+        "file": "candidate_frame_compatibility.csv",
+        "rows": 907,
+        "columns": 9
+      },
+      {
+        "file": "candidate_policy_performance.csv",
+        "rows": 96,
+        "columns": 12
+      },
+      {
+        "file": "candidate_set_sizes.csv",
+        "rows": 10,
+        "columns": 4
+      },
+      {
+        "file": "candidate_sources.csv",
+        "rows": 6,
+        "columns": 5
+      },
+      {
+        "file": "candidate_summary.csv",
+        "rows": 36,
+        "columns": 10
+      },
+      {
+        "file": "category_performance.csv",
+        "rows": 2016,
+        "columns": 13
+      },
+      {
+        "file": "coding_matrix.csv",
+        "rows": 2896,
+        "columns": 51
+      },
+      {
+        "file": "component_performance.csv",
+        "rows": 432,
+        "columns": 13
+      },
+      {
+        "file": "component_tests.csv",
+        "rows": 144,
+        "columns": 17
+      },
+      {
+        "file": "confusion_matrices.csv",
+        "rows": 12672,
+        "columns": 8
+      },
+      {
+        "file": "expert_consensus.csv",
+        "rows": 181,
+        "columns": 22
+      },
+      {
+        "file": "illuminance_performance.csv",
+        "rows": 432,
+        "columns": 23
+      },
+      {
+        "file": "illuminance_standardization_audit.csv",
+        "rows": 1056,
+        "columns": 9
+      },
+      {
+        "file": "illuminance_standardized_components.csv",
+        "rows": 288,
+        "columns": 10
+      },
+      {
+        "file": "illuminance_tests.csv",
+        "rows": 288,
+        "columns": 15
+      },
+      {
+        "file": "information_frame_transitions.csv",
+        "rows": 5068,
+        "columns": 7
+      },
+      {
+        "file": "information_tests.csv",
+        "rows": 252,
+        "columns": 17
+      },
+      {
+        "file": "multiplicity_families.csv",
+        "rows": 9,
+        "columns": 4
+      },
+      {
+        "file": "omnibus_tests.csv",
+        "rows": 18,
+        "columns": 11
+      },
+      {
+        "file": "ordered_bootstrap_contrasts.csv",
+        "rows": 1188,
+        "columns": 10
+      },
+      {
+        "file": "ordered_bootstrap_intervals.csv",
+        "rows": 864,
+        "columns": 9
+      },
+      {
+        "file": "performance.csv",
+        "rows": 144,
+        "columns": 22
+      },
+      {
+        "file": "previous_code_transitions.csv",
+        "rows": 30,
+        "columns": 11
+      },
+      {
+        "file": "prior_provenance_audit.csv",
+        "rows": 20,
+        "columns": 7
+      },
+      {
+        "file": "recording_contrast_differences.csv",
+        "rows": 252,
+        "columns": 9
+      },
+      {
+        "file": "recording_weight_sensitivity.csv",
+        "rows": 16,
+        "columns": 6
+      },
+      {
+        "file": "reference_agreement.csv",
+        "rows": 9,
+        "columns": 7
+      },
+      {
+        "file": "reference_composition.csv",
+        "rows": 168,
+        "columns": 6
+      },
+      {
+        "file": "shared_complete_tests.csv",
+        "rows": 24,
+        "columns": 14
+      },
+      {
+        "file": "version_tests.csv",
+        "rows": 144,
+        "columns": 15
+      }
+    ]
+  },
+  "public_independent_checks": {
+    "status": "PASS",
+    "external_action_reference_cells": 252,
+    "fixed_load_lookup_cells": 84,
+    "consensus_csv_reference_cells": 543,
+    "performance_rows": 144,
+    "category_rows": 2016,
+    "exact_paired_tests": 564,
+    "integer_exact_illuminance_tests": 288,
+    "holm_families": 9,
+    "candidate_memberships": 1058,
+    "derived_outputs_checked": 5792
+  },
+  "document_QA": {
+    "status": "PASS",
+    "main_sha256": "002a53799038eae4f8bd4553ad33432eebf7986927e7ff9e1ef23a2803ab070e",
+    "main_pages_rendered_and_reviewed": 17,
+    "supplement_pages_rendered_and_reviewed": 12,
+    "purple_color": "#7030A0",
+    "purple_runs": 63,
+    "abstract_word_count": 185,
+    "references": 22,
+    "session_isolation_paragraph_unchanged": true,
+    "ethics_and_consent_statements_unchanged": true,
+    "all_6_main_tables_preserved": true,
+    "original_16_supplement_tables_preserved": true,
+    "main_embedded_media_preserved": 9,
+    "original_input_csv_hashes_preserved": true,
+    "changed_scientific_csvs": [
+      "action_lookup_load1.csv"
+    ],
+    "lookup_changes": [
+      {
+        "code": "3141",
+        "old": "2",
+        "new": "3"
+      },
+      {
+        "code": "3151",
+        "old": "3",
+        "new": "4"
+      }
+    ],
+    "original_model_posture_codes_edited": 0,
+    "prompts_byte_preserved": 8
+  },
+  "protocol_metadata_audit": {
+    "status": "PASS_WITH_ARCHIVED_SCHEMA_DEVIATIONS",
+    "rows_checked": 2896,
+    "flagged_fields": 326,
+    "flagged_rows": 187,
+    "issue_counts": {
+      "free_text_outside_evidence_enum": 207,
+      "influence_flag_without_substantive_prior": 5,
+      "primary_NA_with_resolved_evidence": 1,
+      "prior_availability_used_as_validity": 112,
+      "resolved_primary_with_insufficient_evidence": 1
+    },
+    "deterministic_metadata_normalizations": 118,
+    "fields_requiring_source_review": 208,
+    "raw_input_rewritten": false,
+    "posture_codes_changed": 0,
+    "scientific_metric_effect": "None; metadata audit and proposed normalizations are separate from the original-output analysis.",
+    "ai_input_sha256": "9334f156d90241731e466721e898b36c227d21f17a448e3b6cb93c6bd328bba2"
+  },
+  "historical_source_workbook_XML_recheck_performed": false,
+  "main_manuscript_included_in_numerical_archives": false,
+  "participant_images_added": false,
+  "code_or_data_licence_selected": false,
+  "submission_information_complete": false,
+  "packaging_revision": {
+    "base_release": "2026-10-28-v3",
+    "change": "Move investigator information checklist to separate Word document and remove its Markdown file from the data ZIP; update references and integrity inventories.",
+    "python_scripts_unchanged": true,
+    "scientific_csv_tables_unchanged": 33,
+    "prompt_contents_unchanged": 8,
+    "scientific_analysis_rerun_required": false,
+    "computational_validation": "Retained successful v3 validation; this revision changes documentation and package inventories only."
+  }
+}

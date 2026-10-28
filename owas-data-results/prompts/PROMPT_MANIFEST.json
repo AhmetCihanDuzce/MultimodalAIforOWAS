@@ -1,0 +1,85 @@
+{
+  "release_version": "2026-10-28-v4",
+  "files": [
+    {
+      "condition": 1,
+      "file": "01_Side_NoPrior_EN.txt",
+      "version": "1.0",
+      "protocol_date": "2026-10-26",
+      "current_images": "side",
+      "prior_baseline": null,
+      "sha256": "969b9010bfad11d18cc20d7aa416a54c1beb23b892ba2a8530eb303f82cd8a6f",
+      "source_uploaded_filename": "01_Side_NoPrior_EN(3).txt"
+    },
+    {
+      "condition": 2,
+      "file": "02_Front_NoPrior_EN.txt",
+      "version": "1.0",
+      "protocol_date": "2026-10-26",
+      "current_images": "front",
+      "prior_baseline": null,
+      "sha256": "20b75118cdd1ef626892898ecb57d9990d3c611a3f8ab5473ff839f7b59088c1",
+      "source_uploaded_filename": "02_Front_NoPrior_EN(3).txt"
+    },
+    {
+      "condition": 3,
+      "file": "03_Both_NoPrior_EN.txt",
+      "version": "1.0",
+      "protocol_date": "2026-10-26",
+      "current_images": "both",
+      "prior_baseline": null,
+      "sha256": "a808a846581cbd4f581258b1b95bb28f997ac6816a30541eaeb7d80131dfde81",
+      "source_uploaded_filename": "03_Both_NoPrior_EN(3).txt"
+    },
+    {
+      "condition": 4,
+      "file": "04_Both_With_SideCodes_EN_v1_1.txt",
+      "version": "1.1",
+      "protocol_date": "2026-10-26",
+      "current_images": "both",
+      "prior_baseline": 1,
+      "sha256": "3d7b8b6488ce13c6b0e59258d1b27926c9751245c315265d22aba6b87e1e2584",
+      "source_uploaded_filename": "04_Both_With_SideCodes_EN_v1_1(2).txt"
+    },
+    {
+      "condition": 5,
+      "file": "05_Both_With_FrontCodes_EN_v1_1.txt",
+      "version": "1.1",
+      "protocol_date": "2026-10-26",
+      "current_images": "both",
+      "prior_baseline": 2,
+      "sha256": "21963499d242bda79b230396df0b82ec4f46d4bc8cbebc1487e42f9f6e71a201",
+      "source_uploaded_filename": "05_Both_With_FrontCodes_EN_v1_1(2).txt"
+    },
+    {
+      "condition": 6,
+      "file": "06_Both_With_BothCodes_EN_v1_1.txt",
+      "version": "1.1",
+      "protocol_date": "2026-10-26",
+      "current_images": "both",
+      "prior_baseline": 3,
+      "sha256": "ce8f11abfe8b00fcee9af025f04a1a8340d0948ce024c0cdb1296947c24eb516",
+      "source_uploaded_filename": "06_Both_With_BothCodes_EN_v1_1(2).txt"
+    },
+    {
+      "condition": 7,
+      "file": "07_Side_With_FrontCodes_EN_v1_1.txt",
+      "version": "1.1",
+      "protocol_date": "2026-10-26",
+      "current_images": "side",
+      "prior_baseline": 2,
+      "sha256": "c1bbdf16d66fe548ee29c0dfae3870e411f5fbb26e6c0c57bfe814b2ba48a19c",
+      "source_uploaded_filename": "07_Side_With_FrontCodes_EN_v1_1(2).txt"
+    },
+    {
+      "condition": 8,
+      "file": "08_Front_With_SideCodes_EN_v1_1.txt",
+      "version": "1.1",
+      "protocol_date": "2026-10-26",
+      "current_images": "front",
+      "prior_baseline": 1,
+      "sha256": "1d1b9b0b2e8becfe1b1c9407c1028f2fe7e7a3083c93ee7031184994bb9ba673",
+      "source_uploaded_filename": "08_Front_With_SideCodes_EN_v1_1(2).txt"
+    }
+  ]
+}

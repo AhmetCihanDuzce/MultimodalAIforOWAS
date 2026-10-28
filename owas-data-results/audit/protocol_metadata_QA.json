@@ -1,0 +1,19 @@
+{
+  "status": "PASS_WITH_ARCHIVED_SCHEMA_DEVIATIONS",
+  "rows_checked": 2896,
+  "flagged_fields": 326,
+  "flagged_rows": 187,
+  "issue_counts": {
+    "free_text_outside_evidence_enum": 207,
+    "influence_flag_without_substantive_prior": 5,
+    "primary_NA_with_resolved_evidence": 1,
+    "prior_availability_used_as_validity": 112,
+    "resolved_primary_with_insufficient_evidence": 1
+  },
+  "deterministic_metadata_normalizations": 118,
+  "fields_requiring_source_review": 208,
+  "raw_input_rewritten": false,
+  "posture_codes_changed": 0,
+  "scientific_metric_effect": "None; metadata audit and proposed normalizations are separate from the original-output analysis.",
+  "ai_input_sha256": "9334f156d90241731e466721e898b36c227d21f17a448e3b6cb93c6bd328bba2"
+}

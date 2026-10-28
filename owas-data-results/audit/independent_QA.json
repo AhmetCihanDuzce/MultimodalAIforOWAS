@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "external_action_reference_cells": 252,
+  "fixed_load_lookup_cells": 84,
+  "consensus_csv_reference_cells": 543,
+  "performance_rows": 144,
+  "category_rows": 2016,
+  "exact_paired_tests": 564,
+  "integer_exact_illuminance_tests": 288,
+  "holm_families": 9,
+  "candidate_memberships": 1058,
+  "derived_outputs_checked": 5792
+}

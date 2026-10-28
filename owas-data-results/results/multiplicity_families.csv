@@ -1,0 +1,10 @@
+﻿family,tests,adjustment,scope
+H1_version_posture,24,Holm,Exploratory; independent-frame sensitivity
+secondary_complete,66,Holm,Exploratory; independent-frame sensitivity
+secondary_action,66,Holm,Exploratory; independent-frame sensitivity
+H2_component_agreement,216,Holm,Exploratory; independent-frame sensitivity
+H3_information_posture,42,Holm,Exploratory; independent-frame sensitivity
+secondary_component_information,126,Holm,Exploratory; independent-frame sensitivity
+H4_illuminance,288,Holm,Exploratory; independent-frame sensitivity
+omnibus_sensitivity,18,Holm,Exploratory; independent-frame sensitivity
+shared_complete_sensitivity,24,Holm,Exploratory; independent-frame sensitivity

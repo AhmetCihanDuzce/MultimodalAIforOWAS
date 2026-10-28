@@ -1,0 +1,19 @@
+﻿dataset,model,endpoint,n,q,df,p_raw,p_holm,family,family_n,assumption
+coverall,M56,posture,69,26.7425149701,7,0.000370774355751,0.00259542049025,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+coverall,M56,complete,69,58.3333333333,7,3.24506421209e-10,4.54308989693e-09,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+coverall,M56,action,69,41.5692307692,7,6.29350780152e-07,6.92285858167e-06,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+coverall,M61,posture,69,24.1294117647,7,0.00108118028788,0.00648708172731,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+coverall,M61,complete,69,44.9826086957,7,1.37827460681e-07,1.65392952817e-06,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+coverall,M61,action,69,30.5925925926,7,7.39034595651e-05,0.000591227676521,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M56,posture,112,13.4852941176,7,0.0611307651132,0.201535685596,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M56,complete,112,14.0451612903,7,0.0503839213991,0.201535685596,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M56,action,112,12.0574162679,7,0.0986864431567,0.201535685596,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M61,posture,112,40.5254237288,7,9.98415501383e-07,9.98415501383e-06,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M61,complete,112,77.6937561943,7,4.06388612321e-14,6.50221779714e-13,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+everyday,M61,action,112,70.3457943925,7,1.25780809332e-12,1.88671213998e-11,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M56,posture,181,12.9372937294,7,0.0736510368071,0.201535685596,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M56,complete,181,33.4508196721,7,2.18168665062e-05,0.000196351798556,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M56,action,181,20.1791044776,7,0.00519553946888,0.0259776973444,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M61,posture,181,54.6167664671,7,1.77565250442e-09,2.30834825575e-08,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M61,complete,181,80.4309053778,7,1.12514296327e-14,1.91274303756e-13,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only
+pooled,M61,action,181,85.4877222693,7,1.04165065849e-15,1.87497118529e-14,omnibus_sensitivity,18,independent frame pairs; exploratory sensitivity only

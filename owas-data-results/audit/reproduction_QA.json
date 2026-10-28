@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "scientific_csv_tables_compared": 33,
+  "protocol_audit_files_compared": 3,
+  "cells_compared": 740170,
+  "tolerated_float_differences": 7,
+  "maximum_absolute_float_difference": 1.000017846308765e-10,
+  "tolerance": "Exact text and integer equality; floating values within absolute 1e-9.",
+  "scope": "Fresh calculations from released deidentified numerical inputs versus all released scientific CSV results. Source-file paths, workbook coordinates and private raw archives are not part of this public reproduction.",
+  "resampling_settings_equal": true,
+  "tables": [
+    {
+      "file": "action_lookup_load1.csv",
+      "rows": 84,
+      "columns": 2
+    },
+    {
+      "file": "candidate_audit.csv",
+      "rows": 1058,
+      "columns": 16
+    },
+    {
+      "file": "candidate_derived_matrix.csv",
+      "rows": 5792,
+      "columns": 57
+    },
+    {
+      "file": "candidate_frame_compatibility.csv",
+      "rows": 907,
+      "columns": 9
+    },
+    {
+      "file": "candidate_policy_performance.csv",
+      "rows": 96,
+      "columns": 12
+    },
+    {
+      "file": "candidate_set_sizes.csv",
+      "rows": 10,
+      "columns": 4
+    },
+    {
+      "file": "candidate_sources.csv",
+      "rows": 6,
+      "columns": 5
+    },
+    {
+      "file": "candidate_summary.csv",
+      "rows": 36,
+      "columns": 10
+    },
+    {
+      "file": "category_performance.csv",
+      "rows": 2016,
+      "columns": 13
+    },
+    {
+      "file": "coding_matrix.csv",
+      "rows": 2896,
+      "columns": 51
+    },
+    {
+      "file": "component_performance.csv",
+      "rows": 432,
+      "columns": 13
+    },
+    {
+      "file": "component_tests.csv",
+      "rows": 144,
+      "columns": 17
+    },
+    {
+      "file": "confusion_matrices.csv",
+      "rows": 12672,
+      "columns": 8
+    },
+    {
+      "file": "expert_consensus.csv",
+      "rows": 181,
+      "columns": 22
+    },
+    {
+      "file": "illuminance_performance.csv",
+      "rows": 432,
+      "columns": 23
+    },
+    {
+      "file": "illuminance_standardization_audit.csv",
+      "rows": 1056,
+      "columns": 9
+    },
+    {
+      "file": "illuminance_standardized_components.csv",
+      "rows": 288,
+      "columns": 10
+    },
+    {
+      "file": "illuminance_tests.csv",
+      "rows": 288,
+      "columns": 15
+    },
+    {
+      "file": "information_frame_transitions.csv",
+      "rows": 5068,
+      "columns": 7
+    },
+    {
+      "file": "information_tests.csv",
+      "rows": 252,
+      "columns": 17
+    },
+    {
+      "file": "multiplicity_families.csv",
+      "rows": 9,
+      "columns": 4
+    },
+    {
+      "file": "omnibus_tests.csv",
+      "rows": 18,
+      "columns": 11
+    },
+    {
+      "file": "ordered_bootstrap_contrasts.csv",
+      "rows": 1188,
+      "columns": 10
+    },
+    {
+      "file": "ordered_bootstrap_intervals.csv",
+      "rows": 864,
+      "columns": 9
+    },
+    {
+      "file": "performance.csv",
+      "rows": 144,
+      "columns": 22
+    },
+    {
+      "file": "previous_code_transitions.csv",
+      "rows": 30,
+      "columns": 11
+    },
+    {
+      "file": "prior_provenance_audit.csv",
+      "rows": 20,
+      "columns": 7
+    },
+    {
+      "file": "recording_contrast_differences.csv",
+      "rows": 252,
+      "columns": 9
+    },
+    {
+      "file": "recording_weight_sensitivity.csv",
+      "rows": 16,
+      "columns": 6
+    },
+    {
+      "file": "reference_agreement.csv",
+      "rows": 9,
+      "columns": 7
+    },
+    {
+      "file": "reference_composition.csv",
+      "rows": 168,
+      "columns": 6
+    },
+    {
+      "file": "shared_complete_tests.csv",
+      "rows": 24,
+      "columns": 14
+    },
+    {
+      "file": "version_tests.csv",
+      "rows": 144,
+      "columns": 15
+    }
+  ]
+}
