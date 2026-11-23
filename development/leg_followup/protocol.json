@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "status": "exploratory follow-up designed after seeing the original four pilot experiments",
+  "locked_before_followup_accuracy": true,
+  "target": "paired-image expert consensus leg component only, classes 2,3,4,5,7",
+  "original_reference_codes_and_landmarks": "unchanged; no manual correction enters training",
+  "illumination": "pooled, not a predictor",
+  "features": ["66 deterministic leg geometry and visibility features per view", "original generic pose features concatenated with leg geometry as an ablation"],
+  "classifiers": ["RBF-SVM", "Random Forest"],
+  "views": ["side", "front", "paired"],
+  "validation": "same five outer, three inner GroupKFold splits as the pilot, recording-specific 60-second blocks, <=10-second training purge around test/validation times",
+  "sensitivity": "paired-view repeats with 30-second blocks",
+  "transfer": "both directions between the two recordings, paired views, source-only tuning",
+  "parameter_grids": {
+    "svm": {"C": [0.1,1,10], "gamma": ["scale",0.1], "class_weight": "balanced"},
+    "rf": {"max_depth": [null,5], "min_samples_leaf": [1,3], "n_estimators": 200, "class_weight": "balanced_subsample"}
+  },
+  "parameter_selection": "inner mean macro-F1, fixed five-class set; imputation and scaling fitted in training only",
+  "selective_workflow": {
+    "fixed_classifier": "Random Forest with leg_geometry only; fixed before follow-up results",
+    "first_view": "side",
+    "second_view": "paired front and side only if side decision is not accepted",
+    "last_step": "expert referral; human outcomes are not simulated or assumed correct",
+    "evidence_gate": "at least four of hip/knee/ankle points visible at confidence >=0.5 and at least one complete hip-knee-ankle chain in an input view",
+    "calibration": "one-parameter temperature scaling of log RF probabilities from purged inner out-of-fold predictions; fitted only within outer training, preserves class argmax",
+    "calibration_support": "at least 50 usable training OOF predictions and at least five per reference class; otherwise temperature=1 and unsupported calibration is logged",
+    "temperature_log_bounds": [-2,2],
+    "primary_training_accuracy_target": 0.9,
+    "secondary_training_accuracy_target": 0.8,
+    "threshold_grid": [0,0.5,0.6,0.7,0.8,0.9,0.95,1.01],
+    "selection": "maximize automatically accepted training OOF observations subject to empirical accuracy target, at least 20 accepted, three time blocks, two reference classes and both recordings; tie-break by fewer second views then higher accuracy",
+    "fallback": "if no eligible threshold pair exists, direct expert referral, with no claim that the target was attained",
+    "comparators": ["side only selective", "paired for all selective", "unselective side", "unselective paired"],
+    "evaluation": ["automated coverage", "accuracy among accepted", "accepted correct and wrong counts", "second-camera use", "expert referral rate", "per-class coverage and recall", "out-of-fold raw and calibrated multiclass Brier and NLL"],
+    "interpretation": "training targets are not guarantees; report actual outer-test performance and sample sizes"
+  },
+  "seed": 20261029,
+  "external_validation": "freeze complete research workflow and checksums on existing data; external images and consensus codes from at least one different worker are not available yet",
+  "claims": "exploratory point estimates on purposively selected images; no population interval, causal clothing effect or external validation claim"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "pose_landmarker_full.task",
+    "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task",
+    "size_bytes": 9398198,
+    "sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1"
+  },
+  {
+    "filename": "mobilenet_v3_small.tflite",
+    "url": "https://storage.googleapis.com/mediapipe-models/image_embedder/mobilenet_v3_small/float32/latest/mobilenet_v3_small.tflite",
+    "size_bytes": 4117670,
+    "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40"
+  }
+]

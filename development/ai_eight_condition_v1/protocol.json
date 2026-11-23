@@ -1,0 +1,49 @@
+{
+  "version": "ai_eight_condition_v1",
+  "designed_on": "2026-10-30",
+  "status": "exploratory follow-up after all earlier AI/ML/hybrid results were inspected",
+  "observations": 181,
+  "models_separate": ["M56", "M61"],
+  "new_worker_data_seen": false,
+  "new_AI_calls": false,
+  "raw_photos_processed": false,
+  "manuscripts_modified": false,
+  "input_sets_order": ["AI3", "AI8", "AI8ML"],
+  "families_order": ["Logistic", "RF", "RBF_SVM"],
+  "controls": ["archived_both", "fixed_image_ML", "ai_NA_filled_by_ML"],
+  "input_sets": {
+    "AI3": "same component raw archived conditions1/2/3, in that order",
+    "AI8": "same component raw archived conditions1..8, in ascending order",
+    "AI8ML": "same eight raw codes followed by same-component fixed-image ML hard code from the previous fully nested hybrid branch"
+  },
+  "categorical_domains": {"back": [0,1,2,3,4], "arms": [0,1,2,3], "legs": [0,1,2,3,4,5,6,7]},
+  "features": "Only same-limb categorical AI predictions, plus ML hard prediction for AI8ML. NA=0 distinct category. No expert values, true correctness flags, other limbs, metadata, timestamps, lux, recording ID, notes/status/evidence/prior-influence text, or probabilities. Load task-known1.",
+  "target": "unchanged paired-image expert consensus: back1-4, arms1-3, legs2/3/4/5/7. Expert labels are training targets and held-out scoring references, never predictor columns.",
+  "AI_dependency": "All eight conditions are fixed archived outputs; not eight independent experts. Conditions4/8 use condition1 prior,5/7 use2,6 uses3 within the same AI version. Prior-source fields and prior components/fullcodes must exactly match corresponding archived AI outputs, not expert references.",
+  "encoding": "train-fitted OneHotEncoder with predeclared domain repeated per3/8/9columns, dense float64, dropNone, handle_unknownerror. No arithmetic averaging of code labels and no ordinal numeric interpretation.",
+  "Logistic": {"C_order": [0.01,0.1,1,10], "settings": "balanced L2 lbfgs, l1_ratio0, tol0.0001, max_iter5000, seed20261029"},
+  "RF": {"max_depth_order": [3,5], "settings": "200 trees, min_samples_leaf3, balanced_subsample, seed20261029,n_jobs1, other sklearn defaults; identical two-setting budget across input sets"},
+  "RBF_SVM": {"C_order": [0.01,0.1,1,10], "settings": "SVC kernelrbf gamma scale, balanced, probabilityFalse, no additional scaling of onehot inputs, other sklearn defaults; identical grid across input sets"},
+  "selection": "per component/version/system mean3inner-fold fixed-class macro-F1 including zero-support classes; ties first ordered candidate. No joint fullcode/test-based selection. Family search budgets differ (4/2/4), disclosed rather than treated as matched across families.",
+  "fallback": "single training target class -> training-class DummyClassifier; empty training ->error. Missing classes do not alter splits or label sets.",
+  "nested_ML_cache": {
+    "source": "ai_ml_hybrid_v1/results/<context>/context_<fold>.joblib, all13contexts pinned by exact SHA256 before new accuracy",
+    "safety": "validate old hybrid protocol freeze and seal, core source/feature hashes, matching outer/inner/further split identities and seed. Reuse only per-context arrays, not all181 OOF tables as training features.",
+    "inner_C_selection": "each outer innerU/V: AI8ML meta training uses rawAIU+MLcrossfitWithinU from saved further3fold grouped/purged subsets; validation uses rawAIV+MLfitU(V). No V/outertest reference labels inform training features or fits.",
+    "outer_final": "meta training uses rawAIT+crossfitMLWithinT; outertest uses rawAIH+MLfitT(H). AI3/AI8 use rawfixedAIcodes only. No new image ML fits or tuning in this branch; fixed image settings remain exactly those declared in old hybrid protocol.",
+    "base_settings": "back paired generic+torso RF200depth5leaf3; arms side generic RBF-SVC C10; legs paired generic+geometry RF200depth5leaf3. Original availability gates unchanged."
+  },
+  "validation": {
+    "seed": 20261029,
+    "main": "same five outer/three inner GroupKFold recording+floor(seconds/60), shuffleTrue; <=10sec same-recording training purge",
+    "sensitivity": "repeat30sec groups; keep60sec main",
+    "transfer": "both directions, same worker, source-only fitting/selection with60sec blocks; not new-person validation or clothing causality",
+    "further": "same old grouped/purged further3folds insideU, seed20261029+outerfold+10000+innerindex1based; reuse exact source contexts only"
+  },
+  "codes": "archived condition3 fullcodes preserved, not reconstructed. Other systems construct three nonzero predictions+fixedload1 or NA if any0. Valid AI leg1/6 inputs and baseline predictions are retained, scored wrong against observed targets. Learned classifiers cannot emit target classes absent in training, including1/6; may predict a class absent from all input codes or fill all-NA input. No calibrated confidence claim.",
+  "metrics": ["fullcode correct/all181 includingNA", "component fixed-class F1", "class recall/precision/F1/support", "completion", "action agreement", "AC3/4 predictedAC1/2", "AC3/4 unresolved", "within-family3to8 and8to8ML paired changes", "cross-family comparisons at same input set", "per-recording outcomes", "all-AI-inputs-NA and input-absent output diagnostics"],
+  "parity_controls": "archived_both/fixed_image_ML/NAfill must equal old hybrid predictions; AI3_Logistic must equal old ai_codes_logistic in every context; old three-code+ML Logistic is reported as historical matched-recipe anchor, not retrained or a new independent sample.",
+  "storage": "outer selected model objects omitted from result caches to avoid redundant large forests; candidate predictions/selection/support retained. Full-training201 model objects frozen for all9systems. Independent selected-fit reproduction verifies sample outer models; do not claim all outer models were independently refitted.",
+  "frozen_role": "all new systems secondary exploratory candidates; previous primary and all secondary seals unchanged",
+  "limits": "one worker, two recordings, irregular purposive frames, repeated adaptive reuse. No population CIs/p-values, general superiority, originality, calibrated-confidence, human-review savings, fresh-raw-image or new-worker result."
+}

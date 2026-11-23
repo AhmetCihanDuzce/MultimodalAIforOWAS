@@ -1,0 +1,11 @@
+mediapipe==1.2.0
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+scikit-learn==1.8.0
+Pillow==12.3.0
+matplotlib==3.10.8
+opencv-contrib-python==5.0.0.93
+absl-py==2.5.1
+flatbuffers==25.12.19
+sounddevice==0.5.6

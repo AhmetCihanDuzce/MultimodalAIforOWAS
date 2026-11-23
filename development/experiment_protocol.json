@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "frozen_before_model_accuracy": true,
+  "date": "2026-10-29",
+  "scope": "exploratory one-worker, two-recording OWAS study",
+  "observational_unit": "synchronized front/side frame pair at one elapsed-video second",
+  "primary_reference": "ref_both_code expert consensus",
+  "targets": {"back": [1,2,3,4], "arms": [1,2,3], "legs": [2,3,4,5,7]},
+  "load": {"fixed_code": 1, "learned": false},
+  "illuminance": {"pool_levels": true, "predictive_feature": false, "primary_stratification": false, "preserve_source_metadata": true},
+  "experiment_order": ["1_algorithm_comparison", "2_view_comparison", "3_recording_transfer", "4_archived_ai_comparison"],
+  "experiment1_views": "paired",
+  "models": ["pose_RBF_SVM", "pose_RandomForest", "frozen_MobileNetV3Small_linear_SVM"],
+  "feature_extractors": {
+    "pose": "MediaPipe Pose Landmarker Full, float16 version 1; IMAGE mode, one pose, confidence thresholds 0.5",
+    "pose_features": "image-plane hip-centered torso-scaled x/y for 22 landmarks 11..32, visibility/presence minimum scores and eight 2D joint angles per view; coordinates below confidence 0.5 become missing; no triangulation or measured 3D claim",
+    "embedding": "official MediaPipe MobileNetV3 Small image embedder, full frame, floating output with L2 normalization; frozen weights; no OWAS fine-tuning",
+    "paired_input": "concatenate front then side features",
+    "independence": "each frame extracted in IMAGE mode without tracking across other frames or folds"
+  },
+  "cv": {
+    "primary_block_seconds": 60,
+    "sensitivity_block_seconds": 30,
+    "block_rule": "recording + floor(timestamp_seconds / block_seconds)",
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "splitter": "GroupKFold shuffle=True, group membership independent of class labels",
+    "seed": 20261029,
+    "purge_seconds": 10,
+    "purge_rule": "remove candidate training rows within <=10 elapsed seconds of any validation/test row in the same recording; also applied in inner CV",
+    "primary_summary": "pooled out-of-fold predictions, exactly one test prediction per observation",
+    "fit_preprocessing_on_training_only": true,
+    "pose_unavailable": "fit on rows with at least one detected view in paired mode; abstain if no input view has a detected pose; keep failures in all-observation denominators",
+    "episode_limitation": "chosen time blocks and purge do not establish independent work episodes"
+  },
+  "hyperparameters": {
+    "selection_metric": "mean inner-fold macro F1 over fixed component class set, including failures as incorrect",
+    "RBF_SVM": {"C": [0.1,1,10], "gamma": ["scale",0.1], "class_weight": "balanced"},
+    "RandomForest": {"n_estimators": 200, "max_depth": [null,5], "min_samples_leaf": [1,3], "class_weight": "balanced_subsample"},
+    "linear_SVM": {"C": [0.01,0.1,1,10], "class_weight": "balanced"},
+    "probability_calibration": "not performed; not needed for this benchmark"
+  },
+  "metrics": ["component macro F1", "component accuracy", "per-class recall and support", "complete-code accuracy", "action-category accuracy", "unresolved counts", "high-risk misses and unresolved high-risk counts"],
+  "baseline": "training-fold majority class separately for each component",
+  "inference": "point estimates for the selected sample; no independent-frame population confidence intervals or causal clothing/lighting claims",
+  "limitations": ["one worker", "purposive posture sampling", "rare classes", "temporal block choices not validated dependence scale", "pretrained pose domain mismatch possible"]
+}

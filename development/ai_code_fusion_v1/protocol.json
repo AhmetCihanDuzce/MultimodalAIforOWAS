@@ -1,0 +1,39 @@
+{
+  "version": "ai_code_fusion_v1",
+  "designed_on": "2026-10-30",
+  "status": "exploratory follow-up after original AI and ML results were inspected",
+  "new_worker_data_seen": false,
+  "new_AI_calls": false,
+  "raw_photos_processed": false,
+  "observations": 181,
+  "models_separate": ["M56", "M61"],
+  "input_conditions_in_order": {"1": "side_no_prior", "2": "front_no_prior", "3": "both_no_prior"},
+  "reference": "unchanged paired-image expert consensus, back1-4 arms1-3 legs2/3/4/5/7, fixed load1",
+  "features": "For each component use ONLY its three archived categorical predictions, including valid partial components when original fullcode is NA. No expert values, timestamps, recording, lux, other limbs, notes, images or ML features are model predictors.",
+  "input_domains": {"back": [0,1,2,3,4], "arms": [0,1,2,3], "legs": [0,1,2,3,4,5,6,7]},
+  "missing": "Literal NA becomes explicit category0. Invalid non-NA codes are rejected. No numeric averaging or silent imputation.",
+  "systems_order": ["archived_side", "archived_front", "archived_both", "component_majority", "categorical_logistic"],
+  "baselines": "Original archived fullcodes are preserved when valid in the OWAS action table, otherwise NA. Do not reconstruct baseline fullcodes from components.",
+  "majority": "Per component accept a valid nonzero value only when at least two of the three values agree; otherwise0. Two equal plus one NA are accepted; one valid, two differing plus NA, or three differing return0. Valid legs1/6 remain valid predictions, scored wrong against observed targets, never dropped or recoded NA.",
+  "learned_fusion": {
+    "classifier": "one independent multiclass L2 LogisticRegression per component per AI version; lbfgs, l1_ratio0, balanced class weights, max_iter5000, tol0.0001, random_state20261029",
+    "encoding": "train-fitted OneHotEncoder, fixed domain categories declared above repeated for side/front/both, drop=None, handle_unknown=error, dense float64. No scaling, dimensionality search or interactions.",
+    "C_order": [0.01,0.1,1,10],
+    "selection": "mean three inner-fold macro-F1 with fixed target class list including zero-support classes; ties first C",
+    "fallback": "single training class -> deterministic training-class predictor; zero training observations -> error",
+    "NA": "classifier predicts among classes observed in its own training split, even if all three inputs are NA; this is a learned prediction and NOT newly recovered visual evidence. No confidence threshold or calibrated probability claim. Retain all observations.",
+    "scope": "Because legs1/6 are absent from training targets, learned classifier cannot predict them; preserved as distinct input categories. This scope correction is part of learned fusion, not pure voting. The learned classifier may predict a class absent from all three input codes; no choose-among-inputs constraint."
+  },
+  "validation": {
+    "seed": 20261029,
+    "main": "five outer/three inner GroupKFold, shuffle=True, recording plus floor(elapsed_seconds/60), identical prior splits; train observations within <=10sec of validation/test seconds in same recording purged",
+    "sensitivity": "repeat with 30sec grouping; keep 60sec as main",
+    "recording_transfer": "both directions, same worker, source-recording-only training and inner 60sec tuning; not new-person validation or causal clothing inference",
+    "base_outputs": "archived AI outputs are fixed, not trained on study expert labels; no out-of-fold regeneration of base AI calls is required for this dataset. Only supervised fusion is fitted inside training splits.",
+    "static_systems": "repeat deterministic baseline/majority outputs with each context's fold assignments for matched comparisons; repetitions are not additional independent observations"
+  },
+  "constructed_fullcode": "combine newly fused back/arms/legs plus task-known fixed load1 if all three nonzero; otherwise NA. Unlike archived baselines this is a new constructed code; all archived inputs already have load1.",
+  "metrics": ["fullcode correct/all181 including unresolved", "fixed-class macroF1", "per-class precision/recall/F1/support", "complete count", "action agreement", "referenceAC3/4 predictedAC1/2", "referenceAC3/4 unresolved", "both-baseline paired correctness changes", "per-recording results", "all-inputs-NA diagnostic"],
+  "frozen_inference": "freeze all-data trained heads as secondary candidates after evaluation; no external accuracy from training replay. Original modular_v1 primary and MLv2 secondary releases unchanged.",
+  "limits": "single worker, two recordings, purposive irregular frames and adaptive dataset reuse; three outputs reuse the same two images, not independent experts. No population CI/p-values, general superiority or originality claim, no AI adjudicator calls, no new-worker or raw-image result. Manuscripts unchanged."
+}

@@ -1,0 +1,13 @@
+feature_set,view,model,subset,n,correct,accuracy,macro_f1,unresolved
+leg_geometry,paired,svm,all,181,106,0.585635359116022,0.543285766142909,2
+leg_geometry,paired,svm,coverall,69,39,0.5652173913043478,0.4970465379134109,0
+leg_geometry,paired,svm,everyday,112,67,0.5982142857142857,0.552315779105994,2
+leg_geometry,paired,rf,all,181,107,0.5911602209944752,0.5418795934382687,2
+leg_geometry,paired,rf,coverall,69,45,0.6521739130434783,0.5466199813258636,0
+leg_geometry,paired,rf,everyday,112,62,0.5535714285714286,0.5200793373293374,2
+generic_plus_geometry,paired,svm,all,181,110,0.6077348066298343,0.5792158327719928,2
+generic_plus_geometry,paired,svm,coverall,69,42,0.6086956521739131,0.5100635511121444,0
+generic_plus_geometry,paired,svm,everyday,112,68,0.6071428571428571,0.5924324432273681,2
+generic_plus_geometry,paired,rf,all,181,111,0.6132596685082873,0.5697111210435193,2
+generic_plus_geometry,paired,rf,coverall,69,43,0.6231884057971014,0.5041600340818734,0
+generic_plus_geometry,paired,rf,everyday,112,68,0.6071428571428571,0.5687143990193958,2

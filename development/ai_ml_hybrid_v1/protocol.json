@@ -1,0 +1,54 @@
+{
+  "version": "ai_ml_hybrid_v1",
+  "designed_on": "2026-10-30",
+  "status": "exploratory development after previous AI, ML and posthoc error-overlap results were inspected",
+  "observations": 181,
+  "new_worker_data_seen": false,
+  "new_AI_calls": false,
+  "raw_photos_processed": false,
+  "manuscripts_modified": false,
+  "models_separate": ["M56", "M61"],
+  "systems_order": ["archived_both", "fixed_image_ML", "ai_NA_filled_by_ML", "component_source_selection", "ai_codes_logistic", "ai_ML_stacking"],
+  "reference": "unchanged paired-image expert consensus; back1-4, arms1-3, legs2/3/4/5/7, task-known load1",
+  "AI_inputs": "fixed archived no-prior side/front/both conditions1/2/3; valid partial components are used, literal NA -> category0; valid legs1/6 retained. Each AI version separate. No newly fitted AI-code-logistic output is a base input.",
+  "ML_branch": {
+    "role": "new fixed-config comparison branch informed by prior development; does not replace original frozen modular_v1 primary or any earlier secondary release",
+    "back": "paired front-then-side generic74+torso38/view, total224; RF200, max_depth5, min_samples_leaf3, balanced_subsample, seed20261029, n_jobs1",
+    "arms": "side generic74; RBF SVC C10 gamma scale, balanced, probabilityFalse",
+    "legs": "paired front-then-side generic74+leggeometry66/view, total280; RF200, max_depth5, min_samples_leaf3, balanced_subsample, seed20261029, n_jobs1",
+    "preprocessing": "training-only median imputation add_indicatorTrue keep_empty_featuresTrue; training StandardScaler for arms SVC only",
+    "availability": "back uses original pose-detected OR across views; arms side pose-detected; legs geometry available OR across views. Unavailable training rows omitted per head; unavailable query ->0NA. No usable training rows ->all0; single training class ->training-class DummyClassifier. Support logged at every fit.",
+    "tuning": "none; fixed before new hybrid accuracy. Exactly the same branch across baselines and hybrid methods. No all181 global OOF table used as a training feature."
+  },
+  "methods": {
+    "archived_both": "original condition3 fullcode preserved if valid in action table, else NA; never reconstructed from partial components",
+    "fixed_image_ML": "three fixed ML heads; duplicated across AI aliases solely for matched tables, not independent replications",
+    "ai_NA_filled_by_ML": "per head use original AI condition3 code when nonzero, otherwise ML code; valid legs1/6 are never treated as NA",
+    "component_source_selection": "choose AI condition3 or fixed ML separately for each head by mean three inner-fold fixed-target-class macro-F1; ties AI; choice applied unchanged to outer test, no per-test reference routing",
+    "ai_codes_logistic": "matched control using only three raw AI codes of that head; identical C grid, categorical encoding, classifier and inner-score selection to stacking; must reproduce previous categorical_logistic under same splits",
+    "ai_ML_stacking": "each head receives its three raw AI codes plus one hard prediction from the fixed image ML head; four categorical predictors only. No other limbs, timestamps, lux, recording/worker ID, notes, expert values, original numerical image features, probabilities or confidence scores."
+  },
+  "meta": {
+    "classifier": "independent multiclass L2 LogisticRegression per head and AI version; lbfgs, l1_ratio0, balanced, max_iter5000, tol0.0001, seed20261029; single training label -> deterministic DummyClassifier",
+    "categories": {"back": [0,1,2,3,4], "arms": [0,1,2,3], "legs": [0,1,2,3,4,5,6,7]},
+    "encoder": "train-fitted dense float64 OneHotEncoder, predeclared domains repeated for each3/4columns, dropNone, handle_unknownerror; no scaling/interactions",
+    "C_order": [0.01,0.1,1,10],
+    "selection": "mean three inner-fold fixed-label macro-F1; ties first C",
+    "scope": "learned heads may predict a class absent from inputs, including when all inputs areNA; only training-supported target classes can be produced, so legs1/6 are input categories but absent output classes. Full completion is not calibrated confidence."
+  },
+  "validation": {
+    "seed": 20261029,
+    "main": "same five outer/three inner GroupKFold shuffleTrue; recording plus floor(elapsedseconds/60), <=10sec same-recording training purge",
+    "sensitivity": "same with30sec blocks; keep60sec primary",
+    "transfer": "both directions within same worker, source-only fitting/selection with60sec inner blocks; not new-person validation or clothing causality",
+    "stack_C_selection": "For each outer inner split U,V: fit fixed ML onlyU ->V; generate ML training features withinU using further3fold grouped/purged crossfit, seed20261029+outerfold+10000+innerfold_index1based. Fit each metaC on raw AIU + crossfitMLU and labelsU; predictV using rawAIV +MLfitU(V). Neither V nor outer-test labels inform those features or fits.",
+    "outer_final_stack": "meta training ML inputs are3inner-fold crossfit predictions for every outer-training row; final outer-test ML input from fixed base trained on all outer-training rows. MetaC selected as above. All-data freeze repeats same recipe with context201.",
+    "inner_seed": "20261029+outerfold, same earlier protocols",
+    "base_cache": "may reuse a fixed-base fit only for identical training row identities and immutable source hashes; selection never reuses all181 OOF features. No earlier cached fitted base models are used.",
+    "fallbacks": "training support per head, imputer and classifier fit only on available training rows; never alter splits to obtain labels. No available base rows ->0; single meta/base target class ->training-class fallback. Empty purged split ->error."
+  },
+  "constructed_codes": "new systems combine the three nonzero head predictions plus task-known load1; if any head0 ->NA. Archived baseline fullcode remains unchanged.",
+  "metrics": ["exactfullcode correct/all181 includingNA", "component fixed-class macroF1", "per-class precision/recall/F1/support", "complete code count", "action agreement", "referenceAC3/4 predictedAC1/2", "referenceAC3/4 unresolved", "paired correctness changes vsAIboth,ML,andstackvsAIonly", "NAfill counts/correctness", "source choice frequencies", "recording direction"],
+  "inference_freeze": "new all-data base and meta heads plus selections are secondary exploratory candidates only; prior primary/secondary seals unchanged. Cached-feature+code inference, no raw-image parity or external accuracy claim.",
+  "limits": "single worker, two recordings, purposive irregular frames, repeated adaptive development. No population confidence intervals, p-values, general superiority or novelty claim. Same two images underlie AI views and ML; not independent raters. No human-review savings or calibrated-confidence claim."
+}
