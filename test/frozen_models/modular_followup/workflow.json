@@ -1,0 +1,131 @@
+{
+  "version": "modular_v1",
+  "created_at_utc": "2026-10-29T15:27:57.371219+00:00",
+  "primary_system": "modular_flat",
+  "systems": {
+    "modular_flat": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:pose_RF_paired_0"
+    },
+    "modular_RF_flat": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:combined_leg_RF_paired_1"
+    },
+    "modular_RF_hierarchy": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:combined_leg_RF_side_0_hierarchy"
+    },
+    "homogeneous_pose_RF_side": {
+      "back": "back:pose_RF_side_0",
+      "arms": "arms:pose_RF_side_0",
+      "legs": "legs:pose_RF_side_1"
+    },
+    "homogeneous_pose_RF_front": {
+      "back": "back:pose_RF_front_0",
+      "arms": "arms:pose_RF_front_0",
+      "legs": "legs:pose_RF_front_1"
+    },
+    "homogeneous_pose_RF_paired": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RF_paired_1",
+      "legs": "legs:pose_RF_paired_0"
+    },
+    "homogeneous_pose_RBF_SVM_side": {
+      "back": "back:pose_RBF_SVM_side_1",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:pose_RBF_SVM_side_1"
+    },
+    "homogeneous_pose_RBF_SVM_front": {
+      "back": "back:pose_RBF_SVM_front_1",
+      "arms": "arms:pose_RBF_SVM_front_1",
+      "legs": "legs:pose_RBF_SVM_front_0"
+    },
+    "homogeneous_pose_RBF_SVM_paired": {
+      "back": "back:pose_RBF_SVM_paired_1",
+      "arms": "arms:pose_RBF_SVM_paired_0",
+      "legs": "legs:pose_RBF_SVM_paired_1"
+    },
+    "homogeneous_embedding_linear_SVM_side": {
+      "back": "back:embedding_linear_SVM_side_0",
+      "arms": "arms:embedding_linear_SVM_side_0",
+      "legs": "legs:embedding_linear_SVM_side_0"
+    },
+    "homogeneous_embedding_linear_SVM_front": {
+      "back": "back:embedding_linear_SVM_front_1",
+      "arms": "arms:embedding_linear_SVM_front_1",
+      "legs": "legs:embedding_linear_SVM_front_0"
+    },
+    "homogeneous_embedding_linear_SVM_paired": {
+      "back": "back:embedding_linear_SVM_paired_0",
+      "arms": "arms:embedding_linear_SVM_paired_1",
+      "legs": "legs:embedding_linear_SVM_paired_0"
+    }
+  },
+  "classes": {
+    "back": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "arms": [
+      1,
+      2,
+      3
+    ],
+    "legs": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ]
+  },
+  "load": 1,
+  "training_worker_ids": [
+    "W001"
+  ],
+  "external_validation": "not run; no new-worker data",
+  "selection_context": "all existing observations used only for future frozen inference; inner threefold selection; no full-training performance claim",
+  "models_file": "models.joblib",
+  "models_sha256": "41c2deaa3db962527cc0f59f45d94037303e60c0ed3adb5fb18e2ac84347869a",
+  "software_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "mediapipe": "1.2.0",
+    "Pillow": "12.3.0"
+  },
+  "training_input_sha256": {
+    "features/features.npz": "7df34a702f5fa8dc9d46333d31cb1f3014ba40a650dc5df7d6441f015e44efb9",
+    "leg_followup/geometry_features.npz": "cfe76b5fe49fe4e3e3148f872cf038017b259971f776649cad1e54845eab9f82",
+    "audit/paired_manifest.csv": "09d3a1c0477bd329fe38b5db8f941e9715d182492614a95222befcec240a254c",
+    "audit/image_manifest.csv": "fff1542557bd30a2b7704db7326bf2e2112eaa9ce79cd85fce16bf2f387e6df7"
+  },
+  "development_freeze_sha256": "eb6063261c6408b1099ed8003254de873703307650f7c855142531674bf379de",
+  "primary_endpoint": "full-code exact agreement on all eligible paired-images-only consensus observations, unresolved retained",
+  "source_code_sha256": {
+    "modular_followup/models.py": "a0e6436900bc66e7ebc387ec906c610e51fd22304a69f77609e060fba7755561",
+    "modular_followup/feature_interface.py": "b24f366f77f4d427873d3194f6b9541180dd912179ebc6e45d5c323f679b9cff",
+    "extract_features.py": "5be72ccd59f06cd147aad13f34f649de2a96584831ef989d1b07420a2153ff37",
+    "leg_followup/leg_features.py": "38f78771f3c5e0733e2d49ce625fd33741a7df0e13b4fbd2a366b738b147e9e6"
+  },
+  "model_assets": [
+    {
+      "filename": "pose_landmarker_full.task",
+      "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task",
+      "size_bytes": 9398198,
+      "sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1"
+    },
+    {
+      "filename": "mobilenet_v3_small.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/image_embedder/mobilenet_v3_small/float32/latest/mobilenet_v3_small.tflite",
+      "size_bytes": 4117670,
+      "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40"
+    }
+  ]
+}

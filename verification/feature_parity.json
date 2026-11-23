@@ -1,0 +1,74 @@
+[
+  {
+    "photo": "coverall_00065_front.jpg",
+    "feature": "pose",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "coverall_00065_front.jpg",
+    "feature": "embedding",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "coverall_00065_front.jpg",
+    "feature": "pose_detected",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "coverall_00065_side.jpg",
+    "feature": "pose",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "coverall_00065_side.jpg",
+    "feature": "embedding",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "coverall_00065_side.jpg",
+    "feature": "pose_detected",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_front.jpg",
+    "feature": "pose",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_front.jpg",
+    "feature": "embedding",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_front.jpg",
+    "feature": "pose_detected",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_side.jpg",
+    "feature": "pose",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_side.jpg",
+    "feature": "embedding",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "photo": "everyday_00101_side.jpg",
+    "feature": "pose_detected",
+    "within_tolerance": true,
+    "max_absolute_difference": 0.0
+  }
+]

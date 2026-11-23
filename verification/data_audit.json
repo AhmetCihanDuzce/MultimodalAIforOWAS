@@ -1,0 +1,140 @@
+{
+  "paired_observations": 113,
+  "photographs": 226,
+  "lighting_counts": {
+    "aydınlık": 46,
+    "orta": 29,
+    "karanlık": 38
+  },
+  "expert_reference_codes": 339,
+  "AI_outputs": 1808,
+  "AI_models": 2,
+  "conditions_per_model": 8,
+  "missing_image_or_reference_or_AI_IDs": 0,
+  "duplicate_image_IDs": 0,
+  "full_component_code_inconsistencies": 0,
+  "development_image_byte_or_pixel_overlap": 0,
+  "prior_values_checked": 5650,
+  "prior_mismatches": 0,
+  "prior_checks": [
+    {
+      "model": "M56",
+      "condition": 4,
+      "source_condition": 1,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M56",
+      "condition": 5,
+      "source_condition": 2,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M56",
+      "condition": 6,
+      "source_condition": 3,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M56",
+      "condition": 7,
+      "source_condition": 2,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M56",
+      "condition": 8,
+      "source_condition": 1,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M61",
+      "condition": 4,
+      "source_condition": 1,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M61",
+      "condition": 5,
+      "source_condition": 2,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M61",
+      "condition": 6,
+      "source_condition": 3,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M61",
+      "condition": 7,
+      "source_condition": 2,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    },
+    {
+      "model": "M61",
+      "condition": 8,
+      "source_condition": 1,
+      "n": 113,
+      "checked_fields": 5,
+      "all_match": true
+    }
+  ],
+  "reference_component_support": {
+    "back": {
+      "1": 36,
+      "3": 15,
+      "4": 51,
+      "2": 11
+    },
+    "arms": {
+      "1": 51,
+      "2": 38,
+      "3": 24
+    },
+    "legs": {
+      "2": 60,
+      "3": 17,
+      "5": 30,
+      "4": 6
+    },
+    "load": {
+      "1": 113
+    }
+  },
+  "image_dimensions": {
+    "1920x1080": 226
+  },
+  "filename_normalization": "numeric ID plus optional literal suffix \" - Kopya\"; original names preserved, uniqueness checked",
+  "limitations": [
+    "worker identity not supplied",
+    "lighting labels have no verified lux mapping",
+    "frame IDs are not interpreted as elapsed seconds",
+    "consensus codes accepted as user-provided references; individual expert ratings absent"
+  ],
+  "source_sha256": {
+    "61SolYSonuçlar.zip": "0af6774630889b3958300ae56c246dc011ee8ebf09db721ae4dad18232fe3e06",
+    "SarıKırmızıKarşıToplu.zip": "0e52bfdd8327481ca693cc774e8dcdfd09aaf62144d5b37860116537951cf4e7",
+    "SarıKırmızıYanToplu.zip": "4d0b18a91d65a91abde858087ba1833faeef3bbbc36b8d8ab90c0bbface2f411",
+    "xKodlama_SarıKırmızı2.xlsx": "b326ffa59897017d4e4547f77333b28e53365b440ca9f0b81956693f36fced6f",
+    "56LunaYSonuçlar.zip": "8b37a7b171e020e0cfa94fae0c41f3e38024773608b0aa360c729c550aeaaeaa"
+  }
+}

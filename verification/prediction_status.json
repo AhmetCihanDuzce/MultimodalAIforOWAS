@@ -1,0 +1,17 @@
+{
+  "observations": 113,
+  "systems": 66,
+  "prediction_rows": 7458,
+  "reference_labels_read": false,
+  "model_fitting": false,
+  "model_selection_using_job3": false,
+  "new_AI_calls": false,
+  "fitted_model_sha256": {
+    "ai_code_fusion_v1": "32a65559cc9bb7eee9f9a791149f927506cc69e9142c8ec8144f17ccc39e1943",
+    "ai_ml_hybrid_v1": "e0591560643836c4a05b8bacb052d2f1766b1f816bb32254150e3a948dcc03bb",
+    "ai_eight_condition_v1": "b9c65be45bf5decc2254310ad61753ef8d69b8be95bca3d343f7c560c0b05227",
+    "ml_improvement_v2": "6ee65483f8c78854c1f369ba19424951d6fbd1e1fcd17755c155569e5e015947",
+    "modular_followup": "41c2deaa3db962527cc0f59f45d94037303e60c0ed3adb5fb18e2ac84347869a"
+  },
+  "predictions_sha256": "d400d8a8c3c108fa2e82aa2b548aae7cc5925ac41fa3dd0b34f0fda948c454b0"
+}

@@ -1,0 +1,5 @@
+archive,method,label,baseline,final,corrected,completed,lost,change_pp
+M56,ai_ML_stacking,"3 codes + image, logistic",35,43,15,0,7,7.079646017699115
+M61,AI3_RF,"3 codes, random forest",30,41,5,11,5,9.734513274336283
+M61,AI8ML_RBF_SVM,"8 codes + image, SVM",30,40,1,12,3,8.849557522123893
+M61,ai_NA_filled_by_ML,Fill unresolved codes,30,35,0,5,0,4.424778761061947

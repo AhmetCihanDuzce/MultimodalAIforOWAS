@@ -1,0 +1,65 @@
+{
+  "version": "ai_ml_hybrid_v1",
+  "role": "secondary exploratory fixed-image-branch hybrid candidates",
+  "new_worker_data_seen": false,
+  "external_validation": "not_run",
+  "models_sha256": "e0591560643836c4a05b8bacb052d2f1766b1f816bb32254150e3a948dcc03bb",
+  "protocol_freeze_sha256": "883d5db5a74079034682a810c3e932b927ee3abb4df657912881aa4df316db94",
+  "training_observations": 181,
+  "systems": [
+    "archived_both",
+    "fixed_image_ML",
+    "ai_NA_filled_by_ML",
+    "component_source_selection",
+    "ai_codes_logistic",
+    "ai_ML_stacking"
+  ],
+  "source_selections": {
+    "M56": {
+      "back": "ML",
+      "arms": "AI",
+      "legs": "ML"
+    },
+    "M61": {
+      "back": "AI",
+      "arms": "AI",
+      "legs": "ML"
+    }
+  },
+  "selected_C": {
+    "M56": {
+      "back": {
+        "ai_codes_logistic": 10.0,
+        "ai_ML_stacking": 0.1
+      },
+      "arms": {
+        "ai_codes_logistic": 0.01,
+        "ai_ML_stacking": 0.01
+      },
+      "legs": {
+        "ai_codes_logistic": 1.0,
+        "ai_ML_stacking": 0.01
+      }
+    },
+    "M61": {
+      "back": {
+        "ai_codes_logistic": 10.0,
+        "ai_ML_stacking": 1.0
+      },
+      "arms": {
+        "ai_codes_logistic": 10.0,
+        "ai_ML_stacking": 0.01
+      },
+      "legs": {
+        "ai_codes_logistic": 1.0,
+        "ai_ML_stacking": 0.1
+      }
+    }
+  },
+  "source_sha256": {
+    "ai_ml_hybrid_v1/hybrid_models.py": "86b8b4a1849277a6fd73d2fbc969007dd86aa02602857013310d576b3b7cf617",
+    "modular_followup/models.py": "a0e6436900bc66e7ebc387ec906c610e51fd22304a69f77609e060fba7755561",
+    "ai_code_fusion_v1/code_models.py": "331efb2761f0082c24bd9538ebf783d1bcfa0e5f9454c58e5fb43a6e81e6de46"
+  },
+  "limits": "Cached features and archived-format codes only; no raw-photo parity/new-worker score. Prior ML primary/secondary and AI-code releases unchanged."
+}

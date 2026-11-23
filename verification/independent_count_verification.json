@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "independent_scalar_full_action_and_risk_recount": true,
+  "systems": 66,
+  "prediction_rows": 7458,
+  "all_counts_match": true,
+  "previous_code_only_predictions_unchanged": true
+}

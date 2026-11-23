@@ -1,0 +1,35 @@
+{
+  "version": "ai_code_fusion_v1",
+  "role": "secondary exploratory code-fusion candidates",
+  "new_worker_data_seen": false,
+  "external_validation": "not_run",
+  "new_AI_calls": false,
+  "models_sha256": "32a65559cc9bb7eee9f9a791149f927506cc69e9142c8ec8144f17ccc39e1943",
+  "protocol_freeze_sha256": "ab3ac7e5ff6cff095f5c3bed7d4b186214f8ef35e669571f47158156d30b1c0b",
+  "training_observations": 181,
+  "models": [
+    "M56",
+    "M61"
+  ],
+  "systems": [
+    "component_majority",
+    "categorical_logistic"
+  ],
+  "selected_C": {
+    "M56": {
+      "back": 10.0,
+      "arms": 0.01,
+      "legs": 1.0
+    },
+    "M61": {
+      "back": 10.0,
+      "arms": 10.0,
+      "legs": 1.0
+    }
+  },
+  "source_sha256": {
+    "ai_code_fusion_v1/code_models.py": "331efb2761f0082c24bd9538ebf783d1bcfa0e5f9454c58e5fb43a6e81e6de46"
+  },
+  "input_schema": "dataset,frame_id,model,combination,back,arms,legs,load,OWAS_code plus worker_id for external; conditions1/2/3 only",
+  "limits": "Code fusion only. No image processing, new-worker result or calibrated-confidence claim. modular_v1 primary unchanged."
+}

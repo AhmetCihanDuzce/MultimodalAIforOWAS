@@ -1,0 +1,87 @@
+{
+  "version": "ml_improvement_v2_1",
+  "created_at_utc": "2026-10-30T06:06:40.063439+00:00",
+  "status": "secondary exploratory candidates; original modular_v1 primary is unchanged",
+  "external_validation": "not_run",
+  "new_worker_data_seen": false,
+  "raw_pipeline_parity": "not_run",
+  "training_worker_ids": [
+    "W001"
+  ],
+  "classes": {
+    "back": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "arms": [
+      1,
+      2,
+      3
+    ],
+    "legs": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ]
+  },
+  "load": 1,
+  "systems": {
+    "modular_v1_reference": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:pose_RF_paired_0"
+    },
+    "back_generic_matched": {
+      "back": "back:pose_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:pose_RF_paired_0"
+    },
+    "back_torso_matched": {
+      "back": "back:torso_RF_paired_0",
+      "arms": "arms:pose_RBF_SVM_side_1",
+      "legs": "legs:pose_RF_paired_0"
+    },
+    "embedding_pca_matched": {
+      "back": "back:pca_embedding_linear_SVM_front_1",
+      "arms": "arms:pca_embedding_linear_SVM_front_0",
+      "legs": "legs:pca_embedding_linear_SVM_paired_1"
+    },
+    "fusion_pca_pose": {
+      "back": "back:pca_pose_linear_SVM_side_0",
+      "arms": "arms:pca_pose_linear_SVM_front_1",
+      "legs": "legs:pca_pose_linear_SVM_paired_0"
+    },
+    "pool_head_F1": {
+      "back": "back:pca_pose_linear_SVM_paired_1",
+      "arms": "arms:pose_RF_paired_1",
+      "legs": "legs:combined_leg_RF_paired_1"
+    },
+    "pool_joint_fullcode": {
+      "back": "back:torso_RF_paired_0",
+      "arms": "arms:pose_RF_paired_1",
+      "legs": "legs:combined_leg_RF_paired_1"
+    }
+  },
+  "models_file": "models.joblib",
+  "models_sha256": "6ee65483f8c78854c1f369ba19424951d6fbd1e1fcd17755c155569e5e015947",
+  "protocol_freeze_sha256": "463f67398bacc60a39e33740bb7db3b9363381e9b87d97dc2c51b2131bbb4e39",
+  "software_versions": {
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "pandas": "2.2.3",
+    "joblib": "1.5.3"
+  },
+  "source_sha256": {
+    "ml_improvement_v2/fusion_models.py": "1e4b814ee66ef3697ac128a9a9b3ca2037846de922a71be886ed599d7252752b",
+    "ml_improvement_v2/torso_features.py": "2bb80cca7a44fc8411bd004be04ee1d3153d5a9853ff8c8aab0ca7ccb76df9ec",
+    "ml_improvement_v2/run_improvements.py": "8041ef89896955ee645e645f682388228fb8cbb5a47e1a2debb983d93190f6c4",
+    "modular_followup/models.py": "a0e6436900bc66e7ebc387ec906c610e51fd22304a69f77609e060fba7755561",
+    "modular_followup/feature_interface.py": "b24f366f77f4d427873d3194f6b9541180dd912179ebc6e45d5c323f679b9cff"
+  },
+  "in_sample_accuracy_reported": false,
+  "input_note": "cached feature predictor only; no fresh-photo or external validation claimed"
+}

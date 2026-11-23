@@ -1,0 +1,202 @@
+{
+  "version": "ai_eight_condition_v1",
+  "role": "secondary exploratory candidates",
+  "new_worker_data_seen": false,
+  "external_validation": "not_run",
+  "training_observations": 181,
+  "models_sha256": "b9c65be45bf5decc2254310ad61753ef8d69b8be95bca3d343f7c560c0b05227",
+  "protocol_freeze_sha256": "c12ab6fb4d718cbc6a5b8c2648ad860e1eb38dae967c414cb8882ed57a661ff9",
+  "systems": [
+    "AI3_Logistic",
+    "AI8_Logistic",
+    "AI8ML_Logistic",
+    "AI3_RF",
+    "AI8_RF",
+    "AI8ML_RF",
+    "AI3_RBF_SVM",
+    "AI8_RBF_SVM",
+    "AI8ML_RBF_SVM"
+  ],
+  "selected_parameters": {
+    "M56": {
+      "back": {
+        "AI3_Logistic": {
+          "C": 10.0
+        },
+        "AI8_Logistic": {
+          "C": 1.0
+        },
+        "AI8ML_Logistic": {
+          "C": 0.1
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 5
+        },
+        "AI8ML_RF": {
+          "max_depth": 3
+        },
+        "AI3_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 1.0
+        }
+      },
+      "arms": {
+        "AI3_Logistic": {
+          "C": 0.01
+        },
+        "AI8_Logistic": {
+          "C": 0.01
+        },
+        "AI8ML_Logistic": {
+          "C": 0.01
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 3
+        },
+        "AI8ML_RF": {
+          "max_depth": 3
+        },
+        "AI3_RBF_SVM": {
+          "C": 0.1
+        },
+        "AI8_RBF_SVM": {
+          "C": 0.1
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 0.1
+        }
+      },
+      "legs": {
+        "AI3_Logistic": {
+          "C": 1.0
+        },
+        "AI8_Logistic": {
+          "C": 0.1
+        },
+        "AI8ML_Logistic": {
+          "C": 0.1
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 3
+        },
+        "AI8ML_RF": {
+          "max_depth": 5
+        },
+        "AI3_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 1.0
+        }
+      }
+    },
+    "M61": {
+      "back": {
+        "AI3_Logistic": {
+          "C": 10.0
+        },
+        "AI8_Logistic": {
+          "C": 10.0
+        },
+        "AI8ML_Logistic": {
+          "C": 10.0
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 5
+        },
+        "AI8ML_RF": {
+          "max_depth": 5
+        },
+        "AI3_RBF_SVM": {
+          "C": 10.0
+        },
+        "AI8_RBF_SVM": {
+          "C": 10.0
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 1.0
+        }
+      },
+      "arms": {
+        "AI3_Logistic": {
+          "C": 10.0
+        },
+        "AI8_Logistic": {
+          "C": 0.01
+        },
+        "AI8ML_Logistic": {
+          "C": 0.01
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 3
+        },
+        "AI8ML_RF": {
+          "max_depth": 3
+        },
+        "AI3_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8_RBF_SVM": {
+          "C": 0.1
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 10.0
+        }
+      },
+      "legs": {
+        "AI3_Logistic": {
+          "C": 1.0
+        },
+        "AI8_Logistic": {
+          "C": 1.0
+        },
+        "AI8ML_Logistic": {
+          "C": 0.1
+        },
+        "AI3_RF": {
+          "max_depth": 3
+        },
+        "AI8_RF": {
+          "max_depth": 3
+        },
+        "AI8ML_RF": {
+          "max_depth": 5
+        },
+        "AI3_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8_RBF_SVM": {
+          "C": 1.0
+        },
+        "AI8ML_RBF_SVM": {
+          "C": 1.0
+        }
+      }
+    }
+  },
+  "old_image_branch_release_sha256": "aedd4f9ce30cf18302221943c81ca3d01e4bd73448cac20d7d1222c5d72a7022",
+  "limits": "Cached codes/features only; earlier primary and secondary unchanged; no raw-photo parity, new-worker score or calibrated confidence."
+}

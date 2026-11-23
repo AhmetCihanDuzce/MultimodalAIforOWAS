@@ -1,0 +1,13 @@
+dataset,model,illuminance_lux,n,correct
+coverall,M56,100,15,7
+coverall,M56,250,22,7
+coverall,M56,400,32,12
+coverall,M61,100,15,6
+coverall,M61,250,22,6
+coverall,M61,400,32,8
+everyday,M56,100,37,10
+everyday,M56,250,36,7
+everyday,M56,400,39,14
+everyday,M61,100,37,13
+everyday,M61,250,36,5
+everyday,M61,400,39,10
